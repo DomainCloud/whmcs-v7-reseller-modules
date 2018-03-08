@@ -1,0 +1,36 @@
+Type: Domain
+Unique Name: Domain Registration Approved
+Subject: Completed: Registration of {$domain_name} for {$domain_reg_period}
+===============================================
+Message
+===============================================
+Yang terhormat {$client_name},
+
+Selamat! Pendaftaran domain Anda telah disetujui, berikut informasi domain Anda:
+
+Nama Domain : {$domain_name}
+Jenis Pendaftaran : Pendaftaran Baru
+Jenis Domain : {$domain_tld}
+Tahun : {$domain_reg_period}
+Total Harga : {$domain_first_payment_amount} (belum termasuk PPN 10%)
+Sisa kredit: {$client_credit},-
+
+{$signature}
+
+
+------
+
+(English version)
+
+Dear {$client_name},
+
+Congratulations! Your domain registration has been accepted and successfully provisioned. The associated Order details are given below:
+
+Domain name : {$domain_name}
+Registration type : New registration
+Domain type : {$domain_tld}
+Year : {$domain_reg_period}
+Amount : {$domain_first_payment_amount} (not including VAT 10%)
+Balance: {$client_credit},-
+
+{$signature}
