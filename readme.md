@@ -26,12 +26,15 @@ If you have any troubles during installation please contact us at registrar[at]i
 ### Setting up clientarea template for document management
 
 Add this line in `clientareadomains.tpl`:
+*(for this case, the template is "Six")*
+
 ```php
 <a href="/domaindocument.php" class="btn btn-success pull-right">.ID Document Registration</a>
+<div class="clearfix"></div>
 ```
 above this line:
 ```php
-<span class="help-block"><small>{$numitems} {$LANG.recordsfound}, {$LANG.page} {$pagenumber} {$LANG.pageof} {$totalpages}</small></span>
+<form id="domainForm" method="post" action="clientarea.php?action=bulkdomain">...</form>
 ```
 
 ### Setting up clientarea template for DNS Management and Domain/URL Forwarding
@@ -50,7 +53,7 @@ Add these lines in `clientareadomaindetails.tpl`:
 	<li><a href="managedf.php?domainid={$domainid}">Manage URL Forwarding</a></li>
 {/if}
 ```
-to change this line:
+above this line:
 ```php
-{if $dnsmanagement}[code]{/if}
+{if $systemStatus == 'Active' && $managementoptions.nameservers}[code]{/if}
 ```
